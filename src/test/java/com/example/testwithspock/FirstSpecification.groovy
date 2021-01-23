@@ -1,6 +1,7 @@
 package com.example.testwithspock
 
 import spock.lang.Specification
+import spock.lang.Unroll
 
 class FirstSpecification extends Specification {
     def "one plus one should equal two"() {
@@ -42,6 +43,8 @@ class FirstSpecification extends Specification {
     }
 
     // Data Driven Testing
+    // http://spockframework.org/spock/docs/1.0/data_driven_testing.html
+    @Unroll
     def "should expect an Exception to be thrown for invalid input: #sides"() {
         when:
         new Polygon(sides)
@@ -54,6 +57,7 @@ class FirstSpecification extends Specification {
         sides << [-99, 3, 1, 2]
     }
 
+    @Unroll
     def "should be able to create a polygon with #sides sides"() {
         expect:
         new Polygon(sides).numberOfSides == sides
