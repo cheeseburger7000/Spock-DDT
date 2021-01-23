@@ -40,4 +40,25 @@ class FirstSpecification extends Specification {
 //        ex.message == 'Division by zer'
 //        thrown(ArrayIndexOutOfBoundsException)
     }
+
+    // Data Driven Testing
+    def "should expect an Exception to be thrown for invalid input: #sides"() {
+        when:
+        new Polygon(sides)
+
+        then:
+        def exception = thrown(TooFewSidesException)
+        exception.numberOfSides == sides
+
+        where:
+        sides << [-99, 3, 1, 2]
+    }
+
+    def "should be able to create a polygon with #sides sides"() {
+        expect:
+        new Polygon(sides).numberOfSides == sides
+
+        where:
+        sides << [3, 4, 5, -99, 14]
+    }
 }
