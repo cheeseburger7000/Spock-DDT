@@ -20,3 +20,9 @@
 
 Mocking 
 1. [more details](https://www.baeldung.com/mockito-vs-easymock-vs-jmockit)
+2. stubs are useful for providing data or values into the code we're testing.
+3. 通常，我们会在 feature 的 given 标签中定义多个对象，包括主要的测试对象及其依赖。我们可以使用 `@Subject` 标记哪个对象是我们关系的测试对象。
+4. stub 是 mock 的一个特例。
+
+> Mock Objects support the mocking behaviour we saw in the previous test and the stubbing behaviour 
+> Whereas stub objects only support stubbing and not mocking.
