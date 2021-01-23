@@ -72,9 +72,9 @@ class FirstSpecification extends Specification {
         Math.max(a, b) == max
 
         where:
-        a | b | max
-        1 | 3 | 3
-        7 | 4 | 7
-        0 | 0 | 4
+        a | b || max
+        1 | 3 || 3
+        7 | 4 || 7
+        0 | 0 || 4
     }
 }
