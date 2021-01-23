@@ -22,4 +22,22 @@ class FirstSpecification extends Specification {
         then:
         students.size() == 3
     }
+
+    // Groovy Tips for Java Developers:
+    // If we're calling a java getter from groovy code
+    // we can miss out the get at the start of the method name
+    // and groovy will still use the getter rather then the field.
+    //
+    // Install Plugin for Spock
+
+    def "should expect exceptions"() {
+        when:
+        1/0
+
+        then:
+        def ex = thrown(ArithmeticException)
+        ex.message == 'Division by zero'
+//        ex.message == 'Division by zer'
+//        thrown(ArrayIndexOutOfBoundsException)
+    }
 }
