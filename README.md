@@ -16,3 +16,7 @@
 5. cleanup
 
 *within the then and expect blocks, assertions are implicit.
+*data driven testing is when we test the same behavior multiple times with different parameters and assertions.
+
+Mocking 
+1. [more details](https://www.baeldung.com/mockito-vs-easymock-vs-jmockit)
