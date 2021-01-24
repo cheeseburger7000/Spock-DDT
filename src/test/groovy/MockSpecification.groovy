@@ -15,6 +15,9 @@ import java.awt.Color
 // 1.快速提示: Opt + Enter
 // 2.光标上/下一个位置: Opt + CMD + 左右
 class MockSpecification extends Specification {
+//    @Subject
+//    Polygon polygon = new Polygon(4)
+
     void setupSpec() {
         // setup code that needs to be run once at the start
     }
