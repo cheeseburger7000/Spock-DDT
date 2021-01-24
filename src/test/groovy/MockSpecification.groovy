@@ -65,8 +65,9 @@ class MockSpecification extends Specification {
     }
 
     def "use with() to testing multiple properties of a single object"() {
-        given:
+        given: "doc"
         def renderer = Mock(Renderer)
+        and: "use and label to add doc and split code"
         def shapeFactory = new ShareFactory(renderer)
 
         when:
