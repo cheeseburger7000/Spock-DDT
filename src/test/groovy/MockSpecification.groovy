@@ -15,6 +15,13 @@ import java.awt.Color
 // 1.快速提示: Opt + Enter
 // 2.光标上/下一个位置: Opt + CMD + 左右
 class MockSpecification extends Specification {
+    void setupSpec() {
+        // setup code that needs to be run once at the start
+    }
+    void setup() {
+        // setup code that needs to be run before every test method
+    }
+
     def "should be able to mock a concrete class"() {
         given:
 //        Renderer renderer = Mock() // for java developer
@@ -57,7 +64,6 @@ class MockSpecification extends Specification {
         assert polygen.renderer == renderer
     }
 
-    // alternative approach to testing multiple properties of a single object
     def "use with() to testing multiple properties of a single object"() {
         given:
         def renderer = Mock(Renderer)
@@ -73,5 +79,16 @@ class MockSpecification extends Specification {
         }
     }
 
+    // alternative approach to testing multiple properties of a single object
+    def "should demonstrate verifyAll"() {
+        // todo
+    }
 
+    // Move Statement Down: CMD + SHIFT + 下 or Ctrl + Shift + 下
+    void cleanup() {
+        // code that tears down things at the end of a test method
+    }
+    void cleanupSpec() {
+        // code that tears down things at the end of all tests have runn
+    }
 }
