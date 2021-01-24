@@ -56,4 +56,22 @@ class MockSpecification extends Specification {
         assert polygen.numberOfSides == 4
         assert polygen.renderer == renderer
     }
+
+    // alternative approach to testing multiple properties of a single object
+    def "use with() to testing multiple properties of a single object"() {
+        given:
+        def renderer = Mock(Renderer)
+        def shapeFactory = new ShareFactory(renderer)
+
+        when:
+        def polygen = shapeFactory.createDefaultPolygon()
+
+        then:
+        with(polygen) {
+            numberOfSides == 5 // 如果这里失败了，下面的验证就不会继续执行
+            renderer == renderer
+        }
+    }
+
+
 }
