@@ -1,5 +1,8 @@
 # Spock in Action
 
+- [ref doc](http://spockframework.org/spock/docs/1.1/all_in_one.html#_spock_primer)
+- [ddt](http://spockframework.org/spock/docs/1.0/data_driven_testing.html)
+
 1. 将 spock 测试用例放置在 `src/test/groovy` 包下。
 2. 所有的 spock 测试用例类都必须实现 `Specification` 接口。
 3. spock 的 `feature`术语 类似 junit 的测试方法。
