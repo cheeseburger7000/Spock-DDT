@@ -1,6 +1,8 @@
 import com.example.testwithspock.Palette
 import com.example.testwithspock.Polygon
 import com.example.testwithspock.Renderer
+import com.example.testwithspock.ShareFactory
+import org.mockito.Mock
 import spock.lang.Specification
 import spock.lang.Subject
 
@@ -36,5 +38,22 @@ class MockSpecification extends Specification {
 
         expect:
         renderer.getForegroundColour() == Color.RED
+    }
+
+    def "helper methods"() {
+        given:
+        def renderer = Mock(Renderer)
+        def shapeFactory = new ShareFactory(renderer)
+
+        when:
+        def polygen = shapeFactory.createDefaultPolygon()
+
+        then:
+        checkDefaultPolygon(polygen, renderer)
+    }
+
+    private static void checkDefaultPolygon(Polygon polygen, Renderer renderer) {
+        assert polygen.numberOfSides == 4
+        assert polygen.renderer == renderer
     }
 }

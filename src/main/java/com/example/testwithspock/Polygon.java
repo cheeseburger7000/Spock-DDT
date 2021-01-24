@@ -8,6 +8,10 @@ public class Polygon {
 
     private Renderer renderer;
 
+    public Renderer getRenderer() {
+        return renderer;
+    }
+
     public Polygon(int numberOfSides, Renderer renderer) {
         this.numberOfSides = numberOfSides;
         this.renderer = renderer;
