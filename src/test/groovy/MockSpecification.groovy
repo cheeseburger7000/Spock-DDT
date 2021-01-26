@@ -8,12 +8,19 @@ import spock.lang.Subject
 
 import java.awt.Color
 
-
-// Surround with: Opt + CMD + T or Ctrl + Alt + T
-// 实时模版 fori
-// 实用快捷键
-// 1.快速提示: Opt + Enter
-// 2.光标上/下一个位置: Opt + CMD + 左右
+/* 
+Spock Cheatsheets
+1. hello world
+2. given-when-then
+3. expect = when + then
+4. exception
+5. ddt and where label 1) data pipeline 2) datatables
+6. mock
+7. stub
+8. helper methods
+9. with verifyAll
+10. setupSpec setup cleanup cleanupSpec
+*/
 class MockSpecification extends Specification {
 //    @Subject
 //    Polygon polygon = new Polygon(4)
@@ -83,16 +90,15 @@ class MockSpecification extends Specification {
         }
     }
 
-    // alternative approach to testing multiple properties of a single object
+    // alternative approach to testing multiple properties of a single object, see alse with()
     def "should demonstrate verifyAll"() {
         // todo
     }
 
-    // Move Statement Down: CMD + SHIFT + 下 or Ctrl + Shift + 下
     void cleanup() {
         // code that tears down things at the end of a test method
     }
     void cleanupSpec() {
-        // code that tears down things at the end of all tests have runn
+        // code that tears down things at the end of all tests have run
     }
 }
