@@ -9,8 +9,6 @@ class FirstSpecification extends Specification {
         1 + 1 == 2
     }
 
-    // Using CMD + N to generate a Test Method
-    // Using CMD + N to add new file in project navbar.
     def "should demonstrate given-when-then"() {
         given:
         def students = new ArrayList()
